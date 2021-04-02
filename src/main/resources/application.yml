@@ -1,0 +1,28 @@
+cm:
+  root:
+    user: user
+    question: question
+    answer: answer
+
+
+
+jwt:
+  secret: cybernetSecurity
+  expiration: 900_000
+  header: Authorization
+  route:
+    authentication:
+      path: authenticate
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:memDb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2
