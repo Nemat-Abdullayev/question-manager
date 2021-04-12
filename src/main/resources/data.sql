@@ -1,5 +1,8 @@
 insert into user_role (id,name) values (1,'ADMIN');
-insert into cbrn_user (id,username,password,user_role_id) values (1,'nemo','nemo',1);
+insert into user_role (id,name) values (2,'MANAGER');
+insert into user_role (id,name) values (3,'OPERATOR');
+
+insert into cbrn_user (id,username,password,user_role_id) values (1,'nemo','nemo',2);
 
 
 -- insert into cbrnt_question (id,content,difficulty,confirmed) values (1,'test 23',1,true);

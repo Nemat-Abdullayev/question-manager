@@ -7,6 +7,7 @@ import az.cybernet.service.question.QuestionService;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -28,6 +29,7 @@ public class QuestionController {
 
     private final QuestionService questionService;
 
+    @PreAuthorize(value = "hasAnyRole('MANAGER')")
     @PostMapping
     public ResponseEntity<?> addQuestion(@Valid @RequestBody QuestionRequest questionRequest, HttpServletRequest request) {
         return ResponseEntity.ok(questionService.save(questionRequest, request));

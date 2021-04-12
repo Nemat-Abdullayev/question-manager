@@ -17,7 +17,5 @@ public abstract class QuestionMapper {
             @Mapping(target = "difficulty", source = "question.difficulty"),
             @Mapping(target = "confirmed", source = "question.confirmed")
     })
-
     public abstract QuestionResponse mapEntityToView(Question question);
-
 }

@@ -1,6 +1,5 @@
 package az.cybernet.service.question;
 
-import az.cybernet.model.entity.question.Question;
 import az.cybernet.model.view.ConfirmedQuestionRequest;
 import az.cybernet.model.view.QuestionRequest;
 import az.cybernet.model.view.QuestionResponse;

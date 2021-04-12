@@ -1,4 +1,5 @@
 package az.cybernet.model.entity.user;
+
 import az.cybernet.model.enums.RoleName;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
